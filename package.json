@@ -1,0 +1,20 @@
+{
+    "name": "vl_select2",
+    "version": "1.0.0",
+    "description": "vue select2组件, 支持ajax",
+    "main": "vl-select.vue",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "vue",
+        "select2"
+    ],
+    "author": "lincenying",
+    "license": "MIT",
+    "devDependencies": {
+        "jquery": "~2.1.4",
+        "vue": "^1.0.0",
+        "select2": "^4.0.2"
+    }
+}
