@@ -63,6 +63,8 @@ export default {
             config.data = this.data;
         }
         if (this.multiple) {
+            config.tags = true;
+        } else {
             config.tags = this.tags;
         }
         this.$els.select = $(this.$els.select).select2(config).val(this.model).trigger('change')

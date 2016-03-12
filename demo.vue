@@ -15,10 +15,7 @@ input {
     :placeholder="placeholder"
     :allowclear="allowClear"
     :multiple="multiple"
-    :ajax="ajax"
-    :escapemarkup="escapeMarkup"
-    :templateselection="templateSelection"
-    :templateresult="templateResult">
+    :tags="tags">
 </vl-select>
 
 </template>
@@ -29,29 +26,24 @@ import vlSelect from "./vl-select.vue";
 export default {
     data() {
         return {
+            list: [{
+                id:1,
+                text: "php"
+            },{
+                id:2,
+                text: "nodejs"
+            },{
+                id:3,
+                text: ".net"
+            },{
+                id:4,
+                text: "java"
+            }],
             model: "",
-            multiple: false,
-            placeholder: "请选择",
-            allowClear: true,
-            ajax: {
-                url: "https://api.github.com/search/repositories",
-                dataType: 'json',
-                delay: 250,
-                data(params) {
-                    return {
-                        q: params.term
-                    };
-                },
-                processResults(data, params) {
-                    return {
-                        results: data.items
-                    };
-                },
-                cache: true
-            },
-            escapeMarkup(markup) { return markup; },
-            templateSelection(repo) { return repo.full_name; },
-            templateResult(repo) { return repo.full_name; }
+            multiple: true,
+            tags: true,
+            placeholder: "请选择你喜欢的语言",
+            allowClear: true
         }
     },
     components: {

@@ -8,6 +8,7 @@
 * :placeholder="placeholder"
 * :allowclear="allowClear"
 * :multiple="multiple" //多选
+* :tags="tags" //是否以标签形式展示
 
 ### 以下4个位ajax专用
 
@@ -16,4 +17,5 @@
 * :templateselection="templateSelection"
 * :templateresult="templateResult"
 
-#### 详细请看demo.vue的例子
+#### ajax参数, 详细请看demo_ajax.vue的例子
+#### data参数, 详细请看demo.vue的例子
